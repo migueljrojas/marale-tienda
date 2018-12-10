@@ -1,3 +1,37 @@
 .footer {
+    &__primary {
+        background: $mainColor;
+        height: 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        margin: 0;
+        color: $white;
+        font-size: 20px;
+    }
+
+    &__secondary {
+        padding: 5% 0;
+    }
+
+    &__logo {
+        height: 5vw;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
     
 }

@@ -1,6 +1,14 @@
 [
     {
-        "name":"",
-        "url":""
+        "name":"Vinos",
+        "url":"#vinos"
+    },
+    {
+        "name":"Bodega",
+        "url":"/bodega"
+    },
+    {
+        "name":"Contacto",
+        "url":"#contacto"
     }
 ]

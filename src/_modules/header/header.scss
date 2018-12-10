@@ -1,6 +1,121 @@
 .header {
 
     $h: &;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    background: $white;
+    z-index: 1000;
+
+    @include mq(sm) {
+        position: relative;
+    }
+
+    &__container {
+        position: relative;
+        height: 50px;
+
+        @include mq(sm) {
+            height: 80px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        height: 30px;
+        top: 8px;
+
+        @include mq(sm) {
+            height: 50px;
+            top: 15px;
+            left: 0;
+        }
+
+        img {
+            height: 30px;
+            width: auto;
+
+            @include mq(sm) {
+                height: 50px;
+            }
+        }
+    }
+
+    &__nav {
+        @include trans;
+
+        // position: fixed;
+        // top: 50px;
+        // bottom:0;
+        // right:0;
+        // width:100%;
+        // max-width: 390px;
+        // background: transparentize($black, .15);
+        // transform: translateX(100%);
+        // padding: 0 40px;
+        // display: flex;
+        // justify-content: center;
+        // flex-direction: column;
+
+        @include mq(sm){
+            position: relative;
+            background: none;
+            width: 30%;
+        }
+
+        a {
+            @include mq(sm) {
+                color: $black;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__menu {
+        @include mq(sm) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    &__buttons {
+        // position: absolute;
+        // right: 15%;
+        // top: 50%;
+        // transform: translate3d(0, -50%, 0);
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-evenly;
+        // width: 100px;
+
+        @include mq(sm) {
+            display: flex;
+            width: 10%;
+            justify-content: space-evenly;
+
+        }
+    }
+
+    &__button {
+        @include mq(sm) {
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        i {
+            @include mq(sm) {
+                font-size: 28px;
+                color: $black;
+            }
+        }
+    }
 
     &__hamburguer {
         cursor: pointer;
@@ -8,11 +123,11 @@
         height: 25px;
         margin: auto;
         position: absolute;
-        right: 32px;
-        top: 30px;
+        right: 20px;
+        top: 15px;
 
         span {
-            background-color: $mainColor;
+            background-color: $black;
             border-radius: 2px;
             content: '';
             display: block;
@@ -33,6 +148,10 @@
                 animation-direction:reverse;
             }
         }
+
+        @include mq(sm) {
+            display: none;
+        }
     }
 
     &.-open {
@@ -49,7 +168,7 @@
         }
 
         #{$h}__nav {
-
+            transform: translateX(0);
         }
     }
 }

@@ -1,3 +1,231 @@
 .home {
-    
+    &__hero {
+
+        // height: 100vh;
+        // background: url('../images/home/valle1.jpg') center center / cover;
+
+        &__slide {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+        }
+
+        &__col {
+            height: 33.34vw;
+            &--image {
+                width: 66.66%;
+                background: url('../images/home/valle1.jpg') no-repeat center center;
+                background-size: 150%;
+                position: relative;
+            }
+
+            &--pattern {
+                background: url('');
+                width: 33.34%;
+            }
+        }
+
+        &__data {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        &__title {
+            text-align: center;
+            color: $white;
+            font-size: 100px;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 1;
+            margin: 0;
+        }
+
+        &__text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            color: $white;
+            background: $lila;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 50px;
+        }
+
+        &__blanc-bottle {
+            position: absolute;
+            top: 20%;
+            right: 25%;
+        }
+    }
+
+    &__malbec,
+    &__blanc,
+    &__pasita {
+        height: 33.34vw;
+
+        &__image {
+            &--left {
+                position: relative;
+                overflow: hidden;
+                height: 33.34vw;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+
+            &--bottle {
+                transform: rotate(20deg) scale3d(1.2,1.2,1.2);
+                padding-top: 5%;
+            }
+
+            &--right {
+                overflow: hidden;
+                height: 33.34vw;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                    transform: translateX(-35%);
+                }
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            background: url('../images/home/pattern2.gif');
+            overflow: hidden;
+            height: 33.34vw;
+        }
+
+        &__data {
+            width: 50%;
+            padding: 10% 0 10% 10%;
+        }
+
+        &__title {
+            margin: 0;
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 10%;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        &__text {
+            color: $white;
+        }
+
+        &__price {
+            color: $white;
+            margin-bottom: 10%;
+        }
+
+        &__button {
+            background: $white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            color: $black;
+            font-size: 14px;
+        }
+    }
+
+    &__blanc {
+        &__wrapper {
+            background: url('../images/home/pattern3.gif');
+        }
+
+        &__image {
+            &--bottle  {
+                transform: rotate(0) scale3d(1.5,1.5,1.5) translateY(-30%);
+            }
+
+            &--right {
+                overflow: hidden;
+                height: 33.34vw;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+
+    &__malbec-reserva {
+        height: 33.34vw;
+
+        &__image {
+            overflow: hidden;
+            height: 33.34vw;
+
+            img {
+                width: auto;
+                height: 100%;
+            }
+
+            &--right {
+                img {
+                    transform: translateX(-30%);
+                }
+            }
+
+            &--bottle {
+                width: 50%;
+                padding-left: 5%;
+                img {
+                    transform: rotate(-15deg);
+
+                }
+            }
+        }
+
+        &__wrapper {
+            background: url('../images/home/pattern4.gif');
+            height: 33.34vw;
+            display: flex;
+        }
+
+        &__data {
+            height: 100%;
+            width: 50%;
+            padding-right: 10%;
+            padding-top: 10%;
+        }
+
+        &__title {
+            margin: 0;
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 10%;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        &__text {
+            color: $white;
+        }
+
+        &__price {
+            color: $white;
+            margin-bottom: 10%;
+        }
+
+        &__button {
+            background: $white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            color: $black;
+            font-size: 14px;
+        }
+    }
 }

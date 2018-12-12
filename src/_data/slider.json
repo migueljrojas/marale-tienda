@@ -1,0 +1,15 @@
+[
+    {
+        "title": "tesoros escondidos",
+        "button": "oasis de san juan",
+        "backgroundUrl":"images/home/valle1.jpg",
+        "winesUrl":"images/home/slider-bottles.png"
+
+    },
+    {
+        "title": "loren ipsum",
+        "button": "loren ipsum",
+        "backgroundUrl":"images/home/valle2.jpg",
+        "winesUrl":"images/home/slider-bottles.png"
+    }
+]

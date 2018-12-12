@@ -1,0 +1,78 @@
+extends ../_layouts/base
+
+include ../_modules/quantity-selector/quantity-selector
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.carro-de-compras
+        section.carro-de-compras__list
+            h1.carro-de-compras__list__title mi carrito
+            .container
+                .row
+                    .col-xs-24
+                        .carro-de-compras__table
+                            .carro-de-compras__table__heading
+                                .carro-de-compras__table__cell
+                                    p producto
+                                .carro-de-compras__table__cell
+                                    p cantidad
+                                .carro-de-compras__table__cell
+                                    p precio unitario
+                                .carro-de-compras__table__cell
+                                    p total
+                                .carro-de-compras__table__cell
+
+                            .carro-de-compras__item
+                                .carro-de-compras__table__cell
+                                    label Producto
+                                    .carro-de-compras__item__wrapper
+                                        .carro-de-compras__item__image
+                                            img(src='../images/home/malbec-1.png')
+                                        h3.carro-de-compras__item__title malbec
+                                .carro-de-compras__table__cell
+                                    .carro-de-compras__item__quantity
+                                        label Cantidad
+                                        +quantity-selector('1')
+                                .carro-de-compras__table__cell
+                                    label Precio
+                                    span.carro-de-compras__item__price $ 250
+                                        
+                                .carro-de-compras__table__cell
+                                    label Total
+                                    span.carro-de-compras__item__amount $ 250
+                                .carro-de-compras__table__cell
+                                    button.carro-de-compras__item__delete-button
+                                        i.material-icons close
+                            .carro-de-compras__item
+                                .carro-de-compras__table__cell
+                                    label Producto
+                                    .carro-de-compras__item__wrapper
+                                        .carro-de-compras__item__image
+                                            img(src='../images/home/malbec-1.png')
+                                        h3.carro-de-compras__item__title malbec
+                                .carro-de-compras__table__cell
+                                    .carro-de-compras__item__quantity
+                                        label Cantidad
+                                        +quantity-selector('1')
+                                .carro-de-compras__table__cell
+                                    label Precio
+                                    span.carro-de-compras__item__price $ 250
+                                        
+                                .carro-de-compras__table__cell
+                                    label Total
+                                    span.carro-de-compras__item__amount $ 250
+                                .carro-de-compras__table__cell
+                                    button.carro-de-compras__item__delete-button
+                                        i.material-icons close
+                        .carro-de-compras__subtotal
+                            .carro-de-compras__subtotal__text Sub Total
+                            .carro-de-compras__subtotal__number $ 250
+                        .carro-de-compras__total
+                            .carro-de-compras__total__text valor total de su compra
+                            .carro-de-compras__total__number $ 250
+                        .carro-de-compras__buttons
+                            a.carro-de-compras__buttons__button Seguir comprando
+                            a.carro-de-compras__buttons__button Finalizar compra

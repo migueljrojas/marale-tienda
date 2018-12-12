@@ -1,10 +1,20 @@
 .footer {
+
+    @include mq(sm) {
+        height: auto;
+    }
+
     &__primary {
         background: $mainColor;
-        height: 10vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 60px 20px 20px 20px;
+
+        @include mq(sm) {
+            height: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
     }
 
     &__wrapper {
@@ -12,6 +22,17 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: 40px;
+
+        @include mq(sm) {
+            margin-bottom: 0;
+        }
+
+        i {
+            color: $white;
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
     }
 
     &__text {
@@ -21,17 +42,68 @@
     }
 
     &__secondary {
-        padding: 5% 0;
-    }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 40px;
 
-    &__logo {
-        height: 5vw;
-
-        img {
-            width: auto;
-            height: 100%;
+        @include mq(sm) {
+            padding: 5% 0;
         }
     }
 
-    
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+
+        @include mq(sm) {
+            height: 3vw;
+            width: auto;
+            margin-bottom: 0;
+        }
+
+        img {
+            width: 100%;;
+            height: auto;
+
+            @include mq(sm) {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+
+    &__address,
+    &__contact {
+        margin-bottom: 40px;
+
+        @include mq(sm) {
+            margin: 0;
+            line-height: 1.7;
+            text-align: left;
+            display: inline-block;
+
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        li {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        a {
+            color: $darkGray;
+            font-size: 24px;
+        }
+    }
 }

@@ -1,20 +1,25 @@
 .header {
 
     $h: &;
+
     position: fixed;
     top:0;
     left:0;
     right:0;
     background: $white;
     z-index: 1000;
+    height: 10vh;
+    width: 100%;
+    // overflow: hidden;
 
     @include mq(sm) {
         position: relative;
+        height: auto;
     }
 
     &__container {
         position: relative;
-        height: 50px;
+        height: 10vh;
 
         @include mq(sm) {
             height: 80px;
@@ -27,7 +32,7 @@
     &__logo {
         position: absolute;
         height: 30px;
-        top: 8px;
+        top: 15px;
 
         @include mq(sm) {
             height: 50px;
@@ -48,71 +53,89 @@
     &__nav {
         @include trans;
 
-        // position: fixed;
-        // top: 50px;
-        // bottom:0;
-        // right:0;
-        // width:100%;
-        // max-width: 390px;
-        // background: transparentize($black, .15);
-        // transform: translateX(100%);
-        // padding: 0 40px;
-        // display: flex;
-        // justify-content: center;
-        // flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        background: transparentize($black, .15);
+        transform: translateX(100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 90vh;
+        width: calc(100% + 30px);
 
         @include mq(sm){
             position: relative;
             background: none;
             width: 30%;
+            padding: 0;
+            transform: translate(0);
+            justify-content: space-around;
+            top: 0;
+            height: auto;
         }
 
         a {
+            font-weight: 700;
+
             @include mq(sm) {
                 color: $black;
-                font-weight: 700;
             }
         }
     }
 
     &__menu {
         @include mq(sm) {
+            width: 100%;
             display: flex;
             justify-content: space-evenly;
+        }
+
+        li {
+            margin-bottom: 20px;
+            font-size: 30px;
+
+            @include mq(sm) {
+                font-size: 20px;
+                margin-bottom: 0;
+            }
         }
     }
 
     &__buttons {
-        // position: absolute;
-        // right: 15%;
-        // top: 50%;
-        // transform: translate3d(0, -50%, 0);
-        // display: flex;
-        // align-items: center;
-        // justify-content: space-evenly;
-        // width: 100px;
+        position: absolute;
+        right: 20%;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 25%;
 
         @include mq(sm) {
-            display: flex;
             width: 10%;
+            display: flex;
+            position: relative;
+            transform: translate3d(0,0,0);
             justify-content: space-evenly;
-
+            top: 0;
+            right: 0;
         }
     }
 
     &__button {
-        @include mq(sm) {
-            background: none;
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-        }
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
 
         i {
+            font-size: 28px;
+            color: $black;
+
             @include mq(sm) {
                 font-size: 28px;
-                color: $black;
             }
         }
     }
@@ -123,8 +146,8 @@
         height: 25px;
         margin: auto;
         position: absolute;
-        right: 20px;
-        top: 15px;
+        right: 22px;
+        top: 22px;
 
         span {
             background-color: $black;
@@ -168,7 +191,7 @@
         }
 
         #{$h}__nav {
-            transform: translateX(0);
+            transform: translateX(-5%);
         }
     }
 }

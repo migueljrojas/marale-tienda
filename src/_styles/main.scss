@@ -23,9 +23,23 @@ body {
     font-size: $sm;
 }
 
+main,
+footer {
+    @include trans(all, .5s);
+}
+
+main {
+    padding-top: 10vh;
+
+    @include mq(sm){
+        padding-top: 0;
+    }
+}
+
 a {
     color:$link;
     transition: all $duration $easingLight;
+    text-decoration: none;
 
     &:hover{
         color:$linkHover;

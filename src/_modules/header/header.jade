@@ -7,7 +7,7 @@ header.header
             ul.header__menu
                 each item in site.data.header
                     li
-                        a(href=item.url)= item.name
+                        a(href=item.url, target="_blank")= item.name
         .header__buttons
             a.header__button(href="#")
                 img(src="/images/home/icon-search.png")

@@ -7,9 +7,11 @@
             width: 100%;
         }
 
-        &__bottle {
+        &__bottle-malbec,
+        &__bottle-blanc,
+        &__bottle-malbec-reserva,
+        &__bottle-pasita {
             padding-top: 40px;
-            background: url('../images/home/pattern2.gif');
 
             @include mq(sm) {
                 padding-top: 0;
@@ -35,21 +37,71 @@
             }
         }
 
+        &__bottle-malbec {
+            background: url('../images/home/pattern2.gif');
+        }
+
+        &__bottle-blanc {
+            background: url('../images/home/pattern3.gif');
+        }
+
+        &__bottle-malbec-reserva {
+            background: url('../images/home/pattern4.gif');
+        }
+
+        &__bottle-pasita {
+            background: url('../images/home/pattern1.gif');
+
+            img  {
+                display: none;
+
+                @include mq(sm) {
+                    display: block;
+                    position: absolute;
+                    width: auto;
+                    height: 85%;
+                    top: 10%;
+                    left: 50%;
+                    bottom: 0;
+                    right: 0;
+                    transform: translate3d(-50%, 5%, 0) rotate(15deg) scale3d(1.3,1.3,1.3);
+                }
+            }
+        }
+
         &__row {
             width: 100%;
             display: flex;
 
-            &--data {
+            &--data-malbec,
+            &--data-blanc,
+            &--data-malbec-reserva,
+            &--data-pasita {
                 display: flex;
                 justify-content: center;
                 height: 65vh;
-                background: url('../images/home/pattern2.gif');
                 flex-wrap: wrap;
 
                 @include mq(sm) {
                     flex-wrap: nowrap;
                     flex-direction: column;
                 }
+            }
+
+            &--data-malbec {
+                background: url('../images/home/pattern2.gif');
+            }
+
+            &--data-blanc {
+                background: url('../images/home/pattern3.gif');
+            }
+
+            &--data-malbec-reserva {
+                background: url('../images/home/pattern4.gif');
+            }
+
+            &--data-pasita {
+                background: url('../images/home/pattern1.gif');
             }
 
             &--description {
@@ -193,7 +245,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: $lila;
             width: 50%;
             padding: 20px;
             position: relative;
@@ -202,6 +253,19 @@
             @include mq(sm) {
                 padding: 40px;
                 flex-direction: row;
+            }
+
+            &--malbec,
+            &--pasita {
+                background: $lila;
+            }
+
+            &--blanc {
+                background: $yellow;
+            }
+
+            &--malbec-reserva {
+                background: $brown;
             }
 
             img {

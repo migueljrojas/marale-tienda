@@ -107,7 +107,7 @@
             bottom: 0;
 
             @include mq(sm) {
-                right: 11%;
+                right: 11vw;
             }
         }
     }
@@ -145,15 +145,25 @@
             }
 
             &--bottle {
-                position: absolute;
-                top: 15%;
-                left: 35%;
-                transform: rotate(15deg) scale3d(1.2,1.2,1.2);
+                width: 30%;
+                height: 100%;
 
                 @include mq(sm) {
-                    position: relative;
-                    transform: rotate(15deg) scale3d(1.5,1.5,1.5);
-                    left: 0;
+                    width: 50%;
+                    top: 15%;
+                    left: 40%;
+                }
+
+                img {
+                    width: auto;
+                    height: 100%;
+                    transform: rotate(15deg) scale3d(1.3,1.3,1.3) translateX(-25%) translateY(20%);
+
+                    @include mq(sm) {
+                        transform: rotate(15deg) scale3d(1.3,1.3,1.3) translateY(5%);
+                        width: 100%;
+                        height: auto;
+                    }
                 }
             }
 
@@ -184,6 +194,7 @@
             overflow: hidden;
             position: relative;
             height: 75vh;
+            width: 100%;
 
             @include mq(sm) {
                 height: 33.34vw;
@@ -191,7 +202,7 @@
         }
 
         &__data {
-            padding: 30px 0 0 30px;
+            padding: 30px 0 0 20px;
             width: 75%;
 
             @include mq(sm) {
@@ -256,10 +267,16 @@
 
         &__image {
             &--bottle  {
-                transform: rotate(0) translateY(-8%) translateX(8%);
-
                 @include mq(sm) {
-                    transform: rotate(0) scale3d(1.5,1.5,1.5) translateY(-30%);
+                    height: 100%;
+                }
+
+                img {
+                    transform: rotate(0) scale3d(1.3,1.3,1.3) translateX(-25%) translateY(20%);
+
+                    @include mq(sm) {
+                        transform: rotate(0) scale3d(1.5,1.5,1.5) translateY(-15%);
+                    }
                 }
             }
 
@@ -367,23 +384,25 @@
             &--bottle {
                 width: 100%;
                 height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                left: 40%;
 
                 @include mq(sm) {
+                    position: static;
                     width: 50%;
-                    padding-left: 5%;
-                    height: auto;
-                    right: 0;
+                    height: 100%;
                 }
 
                 img {
-                    position: absolute;
-                    transform: translate(-50%) rotate(-30deg) scale3d(.9,.9,.9);
-                    left: 50%;
-                    top: -10%;
+                    transform: rotate(-15deg);
 
                     @include mq(sm) {
-                        left: 45%;
-                        transform: translate(-50%) rotate(-30deg) scale3d(.7,.7,.7);
+                        width: auto;
+                        height: 100%;
+                        transform: rotate(-15deg);
                     }
                 }
             }
@@ -455,29 +474,54 @@
             }
 
             &--bottle {
+                width: 30%;
                 position: absolute;
-                top: 0;
-                left: 35%;
-                transform: rotate(0) scale3d(1.2,1.2,1.2);
 
                 @include mq(sm) {
-                    position: relative;
-                    transform: rotate(0) scale3d(1.2,1.2,1.2);
-                    left: 0;
+                    position: static;
+                    width: 50%;
+                    height: 100%;
+                }
+
+                img {
+                    transform: rotate(0deg) translateX(42%) translateY(10%) scale3d(1.35,1.35,1.35);
+                    width: auto;
+                    height: 100%;
+
+                    @include mq(sm) {
+                        width: auto;
+                        height: 100%;
+                        transform: rotate(0deg) translateX(0) translateY(10%) scale3d(1.35,1.35,1.35);
+                    }
+                }
+            }
+
+            &--right {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    transform: translateX(0);
+
+                    @include mq(sm) {
+                        width: auto;
+                        height: 100%;
+                    }
                 }
             }
         }
 
         &__data {
             padding: 30px;
-            width: 75%;
+            width: 70%;
             position: relative;
             z-index:2;
 
             @include mq(sm) {
                 height: 100%;
                 width: 50%;
-                padding-right: 10%;
+                padding-right: 5%;
                 padding-top: 10%;
             }
         }

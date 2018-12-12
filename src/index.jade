@@ -12,7 +12,7 @@ block content
                             img(src=item.backgroundUrl)
                             .home__hero__data
                                 h1.home__hero__title=item.title
-                                a.home__hero__button(href="#")=item.button
+                                a.home__hero__button(href="/producto")=item.button
                         .home__hero__col.home__hero__col--pattern
                             .home__hero__bottles
                                 img(src=item.winesUrl)
@@ -29,7 +29,7 @@ block content
                                 h2.home__malbec__title malbec
                                 p.home__malbec__text Vino joven, de agradable concentración y estructura, frutado y vivaz. Con notas de frutos rojos.
                                 h2.home__malbec__price $250
-                                a.home__malbec__button Comprar ahora
+                                a.home__malbec__button(href="/producto") Comprar ahora
                             .home__malbec__image.home__malbec__image--bottle
                                 img(src="images/home/malbec-1.png")
                     .col-xs-24.col-sm-6
@@ -44,7 +44,7 @@ block content
                                 h2.home__blanc__title Sauvignon Blanc
                                 p.home__blanc__text Frutos silvestres y violetas con exquisita complejidad.
                                 h2.home__blanc__price $250
-                                a.home__blanc__button Comprar ahora
+                                a.home__blanc__button(href="/producto") Comprar ahora
                             .home__blanc__image.home__blanc__image--bottle
                                 img(src="images/home/blanc.png")
                     .col-xs-24.col-sm-12
@@ -67,7 +67,7 @@ block content
                                 h2.home__malbec-reserva__title Malbec Reserva
                                 p.home__malbec-reserva__text Frutos silvestres y violetas con exquisita complejidad.
                                 h2.home__malbec-reserva__price $250
-                                a.home__malbec-reserva__button Comprar ahora
+                                a.home__malbec-reserva__button(href="/producto") Comprar ahora
         section.home__pasita
             .container-fluid
                 .row.nopadding
@@ -77,12 +77,12 @@ block content
                     .col-xs-24.col-sm-12
                         .home__pasita__wrapper
                             .home__pasita__image.home__pasita__image--bottle
-                                img(src="images/home/malbec-2.png")
+                                img(src="images/home/pasita.png")
                             .home__pasita__data
-                                h2.home__pasita__title pasita 2017
+                                h2.home__pasita__title Pasita 2017
                                 p.home__pasita__text Vino joven, de agradable concentración y estructura, frutado y vivaz. Con notas de frutos rojos.
                                 h2.home__pasita__price $250
-                                a.home__pasita__button Comprar ahora
+                                a.home__pasita__button(href="/producto") Comprar ahora
                     .col-xs-24.col-sm-6
                         .home__pasita__image.home__pasita__image--right
                                 img(src="images/home/marale2.jpg")

@@ -26,7 +26,7 @@ block content
                             .producto__hero__col
                                 p.producto__hero__quantity Cantidad
                                 +quantity-selector('1')
-                                a.producto__hero__button Comprar ahora
+                                a.producto__hero__button(href="/carro-de-compras") Comprar ahora
                         .producto__hero__row.producto__hero__row--description
                             .producto__hero__wrapper
                                 p
@@ -57,12 +57,12 @@ block content
             .container-fluid
                 .row.nopadding
                     .col-xs-24.col-sm-8
-                        .producto__bottle-display__container.producto__bottle-display__container--left
+                        a.producto__bottle-display__container.producto__bottle-display__container--left(href="#")
                             img(src="../images/home/blanc.png")
                     .col-xs-24.col-sm-8
-                        .producto__bottle-display__container.producto__bottle-display__container--center
+                        a.producto__bottle-display__container.producto__bottle-display__container--center(href="#")
                             img(src="../images/home/malbec-2.png")
                     .col-xs-24.col-sm-8
-                        .producto__bottle-display__container.producto__bottle-display__container--right
+                        a.producto__bottle-display__container.producto__bottle-display__container--right(href="#")
                             img(src="../images/product/pasita.png")
     

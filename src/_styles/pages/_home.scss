@@ -46,6 +46,7 @@
 
             &--pattern {
                 background: none;
+                position: relative;
 
                 @include mq(sm) {
                     height: 33.34vw;
@@ -107,7 +108,9 @@
             bottom: 0;
 
             @include mq(sm) {
-                right: 11vw;
+                left: 0;
+                right: auto;
+                transform: translateX(-35%);
             }
         }
     }
@@ -484,14 +487,14 @@
                 }
 
                 img {
-                    transform: rotate(0deg) translateX(42%) translateY(10%) scale3d(1.35,1.35,1.35);
+                    transform: rotate(0deg) translateX(42%);
                     width: auto;
                     height: 100%;
 
                     @include mq(sm) {
                         width: auto;
                         height: 100%;
-                        transform: rotate(0deg) translateX(0) translateY(10%) scale3d(1.35,1.35,1.35);
+                        transform: rotate(0deg) translateX(0);
                     }
                 }
             }
